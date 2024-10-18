@@ -13,13 +13,12 @@ find_package(zstd 1.5.1 QUIET)
 ament_vendor(zstd_vendor
   SATISFIED ${zstd_FOUND}
   VCS_URL https://github.com/facebook/zstd.git
-  VCS_VERSION v1.5.5
+  VCS_VERSION v1.5.6
   SOURCE_SUBDIR build/cmake
   CMAKE_ARGS
     -DZSTD_BUILD_STATIC:BOOL=OFF
     -DZSTD_BUILD_SHARED:BOOL=ON
     -DZSTD_BUILD_PROGRAMS:BOOL=OFF
-    PATCHES patches
 )
 
 install(DIRECTORY cmake DESTINATION share/${PROJECT_NAME})
